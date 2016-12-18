@@ -1,18 +1,27 @@
-package com.skhu.controller;
+package com.skhu.Ian.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.skhu.Ian.model.User;
+import com.skhu.Ian.repository.UserRepository;
+
 
 @Controller
 public class MainController {
 	
+	@Autowired
+	private UserRepository userRepository;
+
+	
 	@RequestMapping("/")
 	@ResponseBody
 	public String home(){
-		System.out.println("ÄÈ½º");
 		return "helloHome";
 	}
 	@RequestMapping("/test")
@@ -20,6 +29,7 @@ public class MainController {
 		model.addAttribute("name","hello springBoot1234");
 		return "hello";
 		
-	  }
+	}
+	
 
 }

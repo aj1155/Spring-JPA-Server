@@ -7,11 +7,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 
 @SpringBootApplication
 @Configuration
 @EnableConfigurationProperties
+@PropertySource({"classpath:DB.properties"})
 @EnableAutoConfiguration
 public class IanApplication extends SpringBootServletInitializer {
 	
