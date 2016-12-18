@@ -114,3 +114,6 @@ gradle-app.setting
 
 # JIRA plugin
 atlassian-ide-plugin.xml
+
+#properties
+DB.properties
